@@ -247,7 +247,7 @@ Respective reference fasta's can also be found within respective folders.
 - [BBmap](https://github.com/BioInfoTools/BBMap) Phred score analysis:
    - raw Phred score extaction with reformat.sh -qchist
    - QvQ plot on clonal datasets with reformat.sh -qahist
--  
+ 
    
 ```bash
 # Subsampling 
@@ -261,8 +261,10 @@ reformat.sh in=[fastq] qchist=[output.csv] maxcalledquality=[int; 90 for ONT]
 # QvQ:
 reformat.sh in=[bam] qahist=[output.csv] maxcalledquality=[int; 90 for ONT] ref=[reference.fasta]
 ```
-> [!Tip]
+
+> [!TIP]
 > If `qahist` fails, filtering adding MD tags to bam alignment might be required:
+
 ```bash
 samtools view -h -F 3844 yourinput.bam | samtools calmd - yourref.fasta | samtools view - -o youroutput.bam
 ```
