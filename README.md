@@ -280,8 +280,6 @@ samtools view -h -F 3844 yourinput.bam | samtools calmd - yourref.fasta | samtoo
 ./quad -c your_custom_calibration.csv input.fastq -o output.fastq
 ```
 
-
-
 ### Calibration File Format
 
 QUAD expects a simple CSV format:
@@ -291,6 +289,8 @@ from,to
 0,0
 1,0
 2,1
+3,2
+4,3
 ...
 ```
 
@@ -298,7 +298,14 @@ from,to
 - **to:** Calibrated Phred score (0-90)
 - Values are integers, rounded from fitted curves
 
-csv templates can be found in [quad_files]()
+csv templates can be found in [quad_files/calibration_csvs/](/quad_files/calibration_csvs/)
+
+### Curve Fits
+- All pre-generated calibrations are fitted to plasmid **R9.4.1 chemistry** data
+- Calibrations exhibit **non-monotonic behavior** at high Phred scores (Q60+)
+- In our benchmarking, **scalar reduction outperformed** fitted curves for variant calling
+
+![cal](img/R9_calibration_comparison.png)
 
 </details>
 
