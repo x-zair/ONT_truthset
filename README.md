@@ -13,7 +13,7 @@ Saw Swee Hock School of Public Health, National University of Singapore
 
 The dataset includes a simple, low-complexity chimeric plasmid truth set designed with short 261 bp inserts, and longer bacterial genome sequences from two closely related *E. coli* strains (∼95% similarity) that contain insertion and deletion variants. This resource allows researchers to benchmark rare variant calling performance specifically on Nanopore sequencing data, reflecting both controlled and complex genomic scenarios.This repository also provides detailed used for the Phred calibration tool [QUAD](https://github.com/andreas-wilm/quad), and accompanying callibration files for Phred score adjusments on `.fastq` files.
 
-<details>
+<details open>
  
 <summary>Truthset Composition and details</summary>
 
