@@ -273,6 +273,33 @@ samtools view -h -F 3844 yourinput.bam | samtools calmd - yourref.fasta | samtoo
 
 <summary> QUAD Calibration</summary>
 
+## Wilm A. QUAD - Quality Adjuster. https://github.com/andreas-wilm/quad
+----
+### Usage:
+```bash
+./quad -c your_custom_calibration.csv input.fastq -o output.fastq
+```
+
+
+
+### Calibration File Format
+
+QUAD expects a simple CSV format:
+
+```csv
+from,to
+0,0
+1,0
+2,1
+...
+```
+
+- **from:** Original encoded Phred score (0-90)
+- **to:** Calibrated Phred score (0-90)
+- Values are integers, rounded from fitted curves
+
+csv templates can be found in [quad_files]()
+
 </details>
 
 <details>
