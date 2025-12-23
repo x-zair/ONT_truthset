@@ -25,7 +25,7 @@ This dataset contains chimeric plasmid mixtures designed within a controlled tru
 - A 261 bp insert region (positions 2554–2785) was selected for modification.  
 - Two chimeric plasmids were created by replacing this insert with sequences from Wild-type and Omicron variants.  
 
-Plasmid mixtures were prepared at varying ratios to simulate ground-truth complexity. Nine mixture sets, along with three clonal plasmids, are available at the [repository](https://www.ncbi.nlm.nih.gov/bioproject/1245633).
+Plasmid mixtures were prepared at varying ratios to simulate ground-truth complexity. Nine mixture sets, along with three clonal plasmids, are available at the [repository](https://www.ncbi.nlm.nih.gov/bioproject/1245633). Sanger reads of all chimeric plasmids can be found in the [/sanger_plasmids](/sanger_plasmids) folder
 
 <img src="/img/vector.png" alt="plasmid design" style="width:40%; height:auto;"/>
 
@@ -37,7 +37,7 @@ Plasmid mixtures were prepared at varying ratios to simulate ground-truth comple
 | Insert length               | 261 base pairs                                  |
 | Variant positions           | 85                                              |
 | Unique mutants              | 100                                             |
-| Single nucleotide variants  | 60 positions with single nucleotide differences across Omicron, Delta, and Wild-type plasmids |
+| Single nucleotide variants  | 70 positions with single nucleotide differences across Omicron, Delta, and Wild-type plasmids |
 | Multiple nucleotide variants| 15 positions with distinct nucleotides in all three plasmids; variant callers must detect two alternate alleles per site, doubling mutants for these positions (15 × 2 = 30 mutants)  |
  
 ![dot_aln](img/dot_aln.png)
